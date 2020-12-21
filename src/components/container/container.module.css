@@ -48,7 +48,7 @@
 }
 
 .header {
-  padding: 30px;
+  padding: 20px;
   text-align: center;
   background: #ff5001;
   color: white;
@@ -59,11 +59,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   background-color:#ffdbd0;
   color: white;
   text-align: center;
-  position: fixed;
 }
 
 .searcher > span{
