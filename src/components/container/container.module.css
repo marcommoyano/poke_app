@@ -63,6 +63,7 @@
   background-color:#ffdbd0;
   color: white;
   text-align: center;
+  position: absolute;
 }
 
 .searcher > span{
