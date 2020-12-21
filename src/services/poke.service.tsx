@@ -9,6 +9,6 @@ export const fetchAllPokemons = async (url: string) => {
 export const fetchPokemon = async (name: string) => {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
   const pokemon = await response.json()
-  console.log(pokemon)
+
   return pokemon
 }

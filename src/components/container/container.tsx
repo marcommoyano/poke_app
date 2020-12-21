@@ -35,7 +35,6 @@ const Container: React.FC<any> = () => {
     if(pokemonResult){
       // const keys =  Object.keys(pokemonResult.sprites)
       for(var k in pokemonResult.sprites){
-        console.log("K", k)
         const value = pokemonResult.sprites[k]
         if(value){
           arrayImages.push(value)
@@ -66,19 +65,16 @@ const Container: React.FC<any> = () => {
     setPokeSearch('')
   }
 
-  if(urlImages){
-    console.log("SPRITES", urlImages)
-  }
-
   return( 
     <>
       <div className={styles.header}>
         PokeAPP
       </div>
-      <div className={styles.searcher}>
-        <p>Para buscar un pokemon en específico escribe su nombre</p>
-        <Search placeholder="Escribe el nombre de un pokemon" onSearch={onSearch} enterButton />
-      </div>
+      <div className={styles.container}>
+        <div className={styles.searcher}>
+          <p>Para buscar un pokemon en específico escribe su nombre</p>
+          <Search placeholder="Escribe el nombre de un pokemon" onSearch={onSearch} enterButton />
+        </div>
         {pokeSearch ? 
           <div className={`${styles.row}`}> 
             {pokemon && 
@@ -114,9 +110,10 @@ const Container: React.FC<any> = () => {
             Página siguiente
           </Button>
         </div>
-        <footer className={styles.footer}>
-          Desarrollado por: Marcom Moyano - API Utilizada: https://pokeapi.co/
-        </footer>
+      </div>
+      <footer className={styles.footer}>
+        Desarrollado por: Marcom Moyano - API Utilizada: https://pokeapi.co/
+      </footer>
     </>
   );
 };
